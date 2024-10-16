@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //2. Print Fibonacci series from a number up to 10 numbers.
+
+
+       let a = 0; // The first Fibonacci number
+let b = 1; // The second Fibonacci number
+
+console.log(a);
+console.log(b); 
+
+for (let i = 2; i < 10; i++) { 
+    let c = a + b; 
+    console.log(c);
+    a = b; // Update 'a' to the previous 'b' for the next iteration
+    // console.log(a);
+    
+    b = c; // Update 'b' to the current Fibonacci number for the next iteration
+}
+    </script>
+</body>
+</html>

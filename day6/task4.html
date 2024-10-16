@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let num = +prompt("Enter a number");
+        
+        while(num!==0){
+            let rem = num%10;
+            let isPrime = true;
+
+            if(rem<2){
+                console.log(rem, "is not a prime nor a composite number");  
+            }else{
+                for(i=2;i<=rem/2;i++){
+                    if(rem%i==0){
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if(isPrime){
+                    console.log(rem, "is a Prime");
+                }else{
+                    console.log(rem, "is not a prime");
+                }
+            }
+            num = Math.floor(num / 10);
+        }
+        
+    
+    </script>
+</body>
+</html>
