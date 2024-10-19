@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const array = [2, 8, 3, 7, 5, 5, 1];
+Sum = 10;
+ pairs = [];
+
+for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+        if (array[i] + array[j] === Sum) {
+            pairs.push([array[i], array[j]]);
+            
+        }
+    }
+}
+
+console.log(pairs);
+
+        
+    </script>
+</body>
+</html>
