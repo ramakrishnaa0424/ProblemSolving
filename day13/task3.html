@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = "javascript is very intresting";
+      str2 = str.toLowerCase();
+      res = "";
+      for (i in str2) {
+        if (
+          (i % 2 === 0 && str[i] == "a") ||
+          str[i] == "e" ||
+          str[i] == "i" ||
+          str[i] == "o" ||
+          str[i] == "u"
+        ) {
+          res = res + str[i];
+        }
+      }
+      console.log("vowels in the even indexes are :", res);
+    </script>
+  </body>
+</html>

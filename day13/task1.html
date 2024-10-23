@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+        //1.take a string and return the count of vowels and consonants in it
+      let str = "RAma KrIshna";
+      str2 = str.toLowerCase();
+      vlws = "";
+      contnts = "";
+      vlws_count = 0;
+      contnts_count = 0;
+      for (i of str2) {
+        if (i == " ") {
+          continue;
+        }
+        if (i == "a" || i == "e" || i == "i" || i == "0" || i == "u") {
+          vlws += i;
+          vlws_count++;
+        } else {
+          contnts += i;
+          contnts_count++;
+        }
+      }
+      console.log("vowels in sting are :", vlws);
+      console.log("consonants in sting are :", contnts);
+      console.log(`No .of vowels in string :${vlws_count}`);
+      console.log(`No .of consonants in a string :${contnts_count}`);
+    </script>
+  </body>
+</html>

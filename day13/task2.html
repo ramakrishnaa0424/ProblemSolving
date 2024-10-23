@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = "rAma KRishNa REddY";
+      u_case = "";
+      l_case = "";
+      u_count = 0;
+      l_count = 0;
+      for (i in str) {
+        if (str[i] == " ") {
+          continue;
+        }
+        if (str[i] == str[i].toUpperCase()) {
+          u_case += str[i];
+          u_count++;
+        } else {
+          l_case += str[i];
+          l_count++;
+        }
+      }
+      console.log("The uppercase letters in a string :", u_case);
+      console.log("The lowercase letters in a string :", l_case);
+      console.log("The uppercase letters count in a string :", u_count);
+      console.log("The lowercase letters count in a string :", l_count);
+    </script>
+  </body>
+</html>
