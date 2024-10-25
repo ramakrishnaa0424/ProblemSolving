@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //write the logic to implement the trim end method
+
+      let str = "Ramakrishna    ";
+
+      let trimed = "";
+      count = 0;
+    
+      for (i = str.length - 1; i >= 0; i--) {
+        if (str[i] == " " && count == 0) {
+        } else {
+          trimed = str[i] + trimed;
+          count++;
+        }
+      }
+      console.log('Original string of a length : '+str.length);
+      console.log('After trimmed string length is : '+trimed.length);
+      console.log('length of a trim : '+(str.length-trimed.length))
+      console.log(trimed)
+    </script>
+  </body>
+</html>

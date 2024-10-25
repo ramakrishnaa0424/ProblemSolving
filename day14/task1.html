@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Given a string convert all the lowercase characters into uppercase and vice versa
+
+      let str = "JavA ScriPt";
+
+      lower = "";
+      upper = "";
+      str1 = "";
+      for (i of str) {
+        if (i == " ") {
+          str1 += " ";
+        } else if (i == i.toUpperCase()) {
+          str1 += i.toLowerCase();
+        } else {
+          str1 += i.toUpperCase();
+        }
+      }
+      console.log("Original string : " + str);
+      console.log("Case Coverted String : " + str1);
+
+    </script>
+  </body>
+</html>

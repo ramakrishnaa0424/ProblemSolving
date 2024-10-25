@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // given a string move all the uppercase characters to the front and lowercase character to last
+      // input ="JscrAViptA"
+      // output="JAVAscript"
+
+      let str = "JscrAViptA";
+
+      u_str1 = "";
+      l_str2 = "";
+      str3 = "";
+
+      for (i of str) {
+        if (i == i.toUpperCase()) {
+          u_str1 += i;
+        } else {
+          l_str2 += i;
+        }
+      }
+      console.log("original string : " + str);
+      console.log(
+        `The separation of upper and lower case : ${str3.concat(
+          u_str1,
+          l_str2
+        )}`
+      );
+    </script>
+  </body>
+</html>
