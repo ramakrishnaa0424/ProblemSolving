@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // vowels="aeiou"
+      //      a
+      //     a e
+      //    a e i
+      //   a e i o
+      //  a e i o u
+
+      let num = 5;
+      let vow = ["a", "e", "i", "o", "u"];
+
+      for (let i = 1; i <= num; i++) {
+        let s = "";
+
+        for (let j = 1; j <= num - i; j++) {
+          s += " ";
+        }
+
+        for (let k = 0; k < i; k++) {
+          s += vow[k] + " ";
+        }
+
+        console.log(s);
+      }
+    </script>
+  </body>
+</html>
