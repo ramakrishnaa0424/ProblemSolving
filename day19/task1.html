@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//     1        1     1    4
+//    2 2       2     2    3
+//   3   3      3     3    2
+//  4     4     4     4    1
+// 5       5    5     5    0 
+//  4     4     6     4    1
+//   3   3      7     3    2
+//    2 2       8     2    3
+//     1        9     1    4
+
+console.log('Print hallow diamond with numbers');
+
+
+num=5;  
+    for (let i = 1; i <= 2*num-1; i++) {
+        s='';
+        spaces=i<=num ?num-i:i-num;
+        cols=i<=num?i:2*num-i;
+        for(sp=0;sp<spaces;sp++){
+            s+=' '
+        }
+        for(j=1;j<=cols;j++){
+            if(j==1||j==cols){
+                s=s+cols+' '
+            }else{
+                s=s+"  "
+            }
+        }
+        console.log(s);
+        
+
+    }
+
+
+    
+//     a        1     1    4
+//    b b       2     2    3
+//   c   c      3     3    2
+//  d     d     4     4    1
+// e       e    5     5    0 
+//  d     d     6     4    1
+//   c   c      7     3    2
+//    b b       8     2    3
+//     a        9     1    4
+
+console.log('Print hallow diamond with Alphabet');
+
+
+num=5;   
+for (let i = 1; i <= 2*num-1; i++) {
+        code=97;
+        s='';
+        spaces=i<=num ?num-i:i-num;
+        cols=i<=num?i:2*num-i;
+        for(sp=0;sp<spaces;sp++){
+            s+=' '
+        }
+        for(j=1;j<=cols;j++){
+            if(j==1||j==cols){
+                s=s+String.fromCharCode(96+cols)+' '
+                code++;
+            }else{
+                s=s+"  "
+            }
+        }
+        console.log(s);
+        
+
+    }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// *      *
+// * *    *
+// *   *  *
+// *    * *
+// *      *
+console.log('print N pattern');
+
+
+a=5;
+for(i=1;i<=a;i++){
+    s=''
+    for(j=1;j<=a;j++){
+        if(j==a||j==1||i==j){
+            s+='*'+' '
+        }else{
+            s+=' '+" "
+        }
+    }
+    console.log(s);
+    
+}
+
+
+//         *    
+//       * *   
+//     *   *    
+//   *     *    
+// * * * * *   
+
+console.log('print left triangle');
+let b = 5;
+for (let i = 1; i <= b; i++) {
+    let s = '';
+
+    // Loop for leading spaces
+    for (let sp = 1; sp <= b - i; sp++) {
+        s += '  ';
+    }
+
+    // Loop for stars and spaces in the pattern
+    for (let j = 1; j <= i; j++) {
+        // Conditions for the border of the triangle
+        if (i === b || j === 1 || j === i) {
+            s += '* ';
+        } else {
+            s += '  ';
+        }
+    }
+
+    console.log(s);
+}
+
+
+
+// * * * * *   1     5
+// *     *     2     4
+// *   *
+// * *
+// *
+console.log('reverse right angled triangle');
+
+let c = 5;
+for (let i = 1; i <= c; i++) {
+    let s = '';
+    
+    for (let j = c; j >= i; j--) {
+        if (i == 1 || j == i || j == c) {
+            s += '* ';
+        } else {
+            s += '  ';
+        }
+    }
+    
+    console.log(s);
+}
+
+
+
+
+  //     1
+  //    1 2
+  //   1 2 3
+  //  1 2 3 4
+  // 1 2 3 4 5
+  //  4 3 2 1
+  //   3 2 1
+  //    2 1
+  //     1
+
+console.log('print diamond pattern with numbers');
+
+let d = 5;
+for (let i = 1; i <= 2 * d - 1; i++) {
+    let s = '';
+    
+    let spaces = i <= d ? d - i : i - d;
+    
+    let cols = i <= d ? i : 2 * d - i;
+    
+    for (let sp = 0; sp < spaces; sp++) {
+        s += ' ';
+    }
+    
+    for (let j = 1; j <= cols; j++) {
+        s += (i <= d ? j : cols - j + 1) + ' ';
+    }
+    
+    console.log(s);
+}
+
+
+
+
+// a b c d e
+//  a b c d
+//   a b c
+//    a b
+//     a
+//    a b
+//   a b c
+//  a b c d
+// a b c d e
+console.log('print search pattern with alphabet');
+
+num=5;
+for(i=num;i>=1;i--){
+code=97;
+s=''
+for(sp=1;sp<=num-i;sp++){
+    s=s+' '
+}
+for(j=i;j>=1;j--){
+    s+=String.fromCharCode(code)+" "
+    code++;
+}
+console.log(s)
+    
+}
+
+for(i=2;i<=num;i++){
+    s=''
+    code=97;
+    for(sp=1;sp<=num-i;sp++){
+        s=s+' '
+    }
+    for(j=1;j<=i;j++){
+        s+=String.fromCharCode(code)+' '
+        code++;
+    }
+    console.log(s)
+}
+
+
+
+    </script>
+</body>
+</html>
