@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // a b c d e    1  5   0
+      //  a     d     2  4   1
+      //   a   c      3  3   2
+      //    a b       4  2   3
+      //     a        5  1   4
+      //    a b       6  2   3
+      //   a   c      7  3   2
+      //  a     d     8  4   1
+      // a b c d e    9  5   0
+
+      num = 5;
+      for (i = 1; i <= 2 * num - 1; i++) {
+        code = 97;
+        s = "";
+        spaces = i <= num ? i - 1 : 2 * num - i - 1;
+        cols = i <= num ? num - i + 1 : i - num + 1;
+        for (sp = 1; sp <= spaces; sp++) {
+          s += " ";
+        }
+        for (j = 1; j <= cols; j++) {
+          if (j == 1 || j == cols || i == 1 || i == 2 * num - 1) {
+            s += String.fromCharCode(code) + " ";
+          } else {
+            s += "  ";
+          }
+          code++;
+        }
+
+        console.log(s);
+      }
+
+
+
+
+
+//         a                1    0    5
+//       a b a              2    1    4     
+//     a b c b a            3    2    3 
+//   a b c d c b a          4    3    2
+// a b c d e d c b a        5    4    1
+
+num=5;
+for(i=1;i<=num;i++){
+    s=''
+    code=97;
+    // code1=97;
+    for(sp=1;sp<=num-i;sp++){
+        s+="  "
+    }
+    for(j=1;j<=i;j++){
+        s=s+String.fromCharCode(code)+' '
+        code++
+    }
+    code=code-2
+    for(k=i-1;k>=1;k--){//1-1 0 true// 2-1 1 
+        // code1=97;
+    s=s+String.fromCharCode(code)+' '
+    code--;
+    }
+    console.log(s)
+}
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
